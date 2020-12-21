@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const consTable = require("console.table");
 const mysql = require ("mysql");
 
-const askQuestion = funtion () {
+const askQuestion = function () {
     inquirer
         .prompt({
             type:"list",
@@ -144,7 +144,7 @@ function updateEmployeeRoles(){
 
                 }
             ])
-            .then (function (res)){
+            .then (function (res){
                 console.log("about to update", res);
                 const idToUpdate = {};
                 idToUpdate.employeesID = parseInt(res.updateEmployeeRoles.split(" ")[0]);
@@ -153,9 +153,67 @@ function updateEmployeeRoles(){
                 } else if (res.newRoles === "employees") {
                     idToUpdate.role_id = 2;
                 }
-            };
-    });
-};
+            }
+    );
+}
 
-
-
+function addDepartments(){
+    inquirer
+        .prompt({
+            type: "input",
+            message: "Enter new department name",
+            name: "dept"
+        })
+        .then(function (res){
+            connection.query(
+                "INSERT INTO departments SET ?",
+                {
+                    name: answer.dept
+                },
+                function (err, resp){
+                    if (err){
+                        throw err;
+                    }
+                }
+            ),
+                console.table(res);
+            askQuestion();
+        });
+}
+function addRoles() {
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "Enter employee title",
+                name: "addtitle"
+            },
+            {
+                type: "input",
+                message: "Enter employee salary",
+                name: "addsalary"
+            },
+            {
+                type: "input",
+                message: "Enter employee department id",
+                name: "addDepID"
+            }
+        ])
+        .then (function (answer){
+            connection.query(
+                "INSERT INTO role SET ?",
+                {
+                    title: answer.addtitle,
+                    salary: answer.addsalary,
+                    department_id: answer.addDEpID
+                },
+                function (err, resp){
+                    if (err){
+                        throw err;
+                    }
+                    console.table(res);
+                }
+            );
+            askQuestion();
+        });
+}
