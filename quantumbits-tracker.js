@@ -86,5 +86,37 @@ function viewallemployees(){
     });
     askQuestion();
 
-    }
+}
+function addemployees(){
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "Please enter employee first name",
+                name: "firstname"
+            },
+            {
+                type: "input",
+                message: "Please enter employee last name",
+                name: "lastname"
+            }
+        ])
+        .then(function (res){
+            connection.query(
+                "INSERT INTO employees SET ?",
+                {
+                    first_name: answer.firstname,
+                    last_name: answer.lastname,
+                    role_id: null,
+                    manager_id: null
+                },
+                function (err, res) {
+                    if (err){
+                        throw err;
+                    }
+                    console.table(res);
+                }
+            );
+            askQuestion();
+        });
         
