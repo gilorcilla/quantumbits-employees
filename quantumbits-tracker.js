@@ -16,8 +16,51 @@ const askQuestion = funtion () {
                 "Add employees",
                 "Add departments",
                 "Add roles",
-                "Remove employee",
+                "Remove employees",
                 "Update employee roles"
             ]
         })
+        .then(function (answer){
+            console.log(answer);
+            switch(answer.beginQuestion){
+                case "View all departments":
+                    viewalldepartments();
+                    break;
+                
+                case "View all roles":
+                    viewallroles();
+                    break;
+                
+                case "View all employees":
+                    viewallemployees();
+                    break;
+                
+                case "Add employees":
+                    addemployees();
+                    break;
+
+                case "Add departments":
+                    adddepartments();
+                    break;
+
+                case "Add roles":
+                    addroles();
+                    break;
+
+                case "Remove employees":
+                    removeemployees();
+                    break;
+
+                case "Update employee roles":
+                    updateemployeeroles();
+                    break;
+            }
+
+        });
+};
+
+askQuestion();
+
+function viewalldepartments() {
+    connection.query
 }
