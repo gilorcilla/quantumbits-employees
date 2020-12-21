@@ -62,5 +62,29 @@ const askQuestion = funtion () {
 askQuestion();
 
 function viewalldepartments() {
-    connection.query
+    connection.query("SELECT * FROM departments", function (err, res){
+        console.log("\n Departments Retrieved from Database\n");
+        console.table(res);
+    });
+    askQuestion();
+
 }
+function viewallroles(){
+    connection.query("SELECT * FROM roles", function (err, res){
+        console.log("\n Roles Retrieved from Database \n");
+        console.table(res);
+    });
+    askQuestion();
+}
+function viewallemployees(){
+    connection.query(fancyQuery, function (err, res){
+        console.log("\n Employees retrieved from Database\n");
+        console.table(res)
+        console.log("Employees Retrieved from Database");
+        const fancyQuery = "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department on role.department_id = department.id;";
+
+    });
+    askQuestion();
+
+    }
+        
