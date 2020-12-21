@@ -119,4 +119,43 @@ function addemployees(){
             );
             askQuestion();
         });
-        
+    }
+
+function updateEmployeeRoles(){
+    let allemp = [];
+    connection.query("SELECT * FROM employee", function (err, answer){
+        for (let i= 0; i < answer.length; i++){
+            let employeeString = answer[i].id + " " + answer[i].first_name + " " + answer[i].last_name;
+            allemployees.push(employeeString);
+        }
+        inquirer
+            .prompt([
+                {
+                    type: "list",
+                    name: "updateEmployeeRoles",
+                    message: "Select employee to update role",
+                    choices: allemployees
+                },
+                {
+                    type: "list",
+                    message: "Select new roles",
+                    choices: ["Manager", "Employee"],
+                    name: "newroles"
+
+                }
+            ])
+            .then (function (res)){
+                console.log("about to update", res);
+                const idToUpdate = {};
+                idToUpdate.employeesID = parseInt(res.updateEmployeeRoles.split(" ")[0]);
+                if (res.newRoles === "manager"){
+                    idToUpdate.role_id = 1;
+                } else if (res.newRoles === "employees") {
+                    idToUpdate.role_id = 2;
+                }
+            };
+    });
+};
+
+
+
