@@ -28,7 +28,7 @@
 
 ### Schema
 
-![](../Assets/schema.png)
+![](./Assets/schema.png)
 
 ### Dependencies
 
