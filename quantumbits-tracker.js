@@ -56,6 +56,7 @@ const askQuestion = function () {
           updateemployeeroles();
           break;
         default:
+          connection.end();
           process.exit(0);
       }
     });
@@ -161,16 +162,16 @@ function updateEmployeeRoles() {
   });
 }
 
-function addDepartments() {
+function adddepartments() {
   inquirer
     .prompt({
       type: "input",
       message: "Enter new department name",
       name: "dept",
     })
-    .then(function (res) {
+    .then(function (answer) {
       connection.query(
-        "INSERT INTO departments SET ?",
+        "INSERT INTO department SET ?",
         {
           name: answer.dept,
         },
@@ -178,10 +179,10 @@ function addDepartments() {
           if (err) {
             throw err;
           }
+          console.table(resp);
+          askQuestion();
         }
-      ),
-        console.table(res);
-      askQuestion();
+      );
     });
 }
 function addRoles() {
