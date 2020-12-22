@@ -22,9 +22,21 @@
 
 ### User Story
 
+Developers are often asked with designing interfaces make it easy for non-developers to view and interact with information stored in databases. Often these interfaces are known as Content Management Systems (CMS). This app is to building and architecting a solution for managing a company's employees.
+
 ### Description
 
+A Content Management Systems that makes it for non-developers to interact and view with the information stored in database.
+
 ### Installation
+
+- Clone the GitHub repo.
+
+- Install all dependencies, see Dependencies for the complete lists.
+
+- Utilze npm install, to install add the dependencies.
+
+- Using MySQL workbench, create your Database.
 
 ### Schema
 
@@ -32,8 +44,20 @@
 
 ### Dependencies
 
+- Inquirer
+
+- MySQL
+
+- Console.table
+
 ### Built With
+
+- VScode
 
 ### Walkthrough Video
 
+https://drive.google.com/file/d/1yxZvxk1Z3PuoRRB9pWxLoilKEnsYkCWA/view?usp=sharing
+
 ### License
+
+MIT License
