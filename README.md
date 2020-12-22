@@ -4,21 +4,21 @@
 
 ### Table of Contents
 
--[User Story]
+-[User Story](https://github.com/gilorcilla/quantumbits-employees#user-story)
 
--[Description]
+-[Description](https://github.com/gilorcilla/quantumbits-employees#description)
 
--[Installation]
+-[Installation](https://github.com/gilorcilla/quantumbits-employees#installation)
 
--[Schema]
+-[Schema](https://github.com/gilorcilla/quantumbits-employees#schema)
 
--[Dependencies]
+-[Dependencies](https://github.com/gilorcilla/quantumbits-employees#dependencies)
 
--[Built With]
+-[Built With](https://github.com/gilorcilla/quantumbits-employees#built-with)
 
--[Walkthrough]
+-[Walkthrough Video](https://github.com/gilorcilla/quantumbits-employees#walkthrough-video)
 
--[License]
+-[License](https://github.com/gilorcilla/quantumbits-employees#license)
 
 ### User Story
 
@@ -28,7 +28,7 @@
 
 ### Schema
 
-![](./Assets/schema.png.)
+![](./quantumbits-employees/Assets/schema.png)
 
 ### Dependencies
 
