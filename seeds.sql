@@ -51,3 +51,37 @@ INSERT INTO
   role (id, title, salary, department_id)
 VALUES
   (9, "IT Manager", 104000);
+INSERT INTO
+  employees (id, first_name, last_name, role_id, manager_id)
+VALUES
+  (10, "Gil", "Orcilla", 9, null);
+INSERT INTO
+  employees (id, first_name, last_name, role_id, manager_id)
+VALUES
+  (
+    9,
+    "Bob, " Villa ", 8, 10);
+
+  INSERT INTO employees (id, first_name, last_name, roles_id, manager_id)
+  VALUES (8, " Wil ", " Choi ", 7, 10);
+
+  INSERT INTO employees (id, first_name, last_name, roles_id, manager_id)
+  VALUES (7, " Dan ", " Bios ", 6, null);
+
+  INSERT INTO employees (id, first_name, last_name, roles_id, manager_id)
+  VALUES (6, " Jeff ", " Nguyen ", 1, 7 );
+
+  INSERT INTO employees (id, first_name, last_name, roles_id, manager_id)
+  VALUES (5, " Vic ", " Morris ", 4, null);
+
+  INSERT INTO employees (id, first_name, last_name, roles_id, manager_id)
+  VALUES (4, " Rachel ", " Brown ", 1, null);
+
+  INSERT INTO employees (id, first_name, last_name, roles_id, manager_id)
+  VALUES (3, " Taylor ", " McDonald ", 2, 4 );
+
+  INSERT INTO employees (id, first_name, last_name, rolesid, manager_id)
+  VALUES (2, " Sina ", " Zumsayed ", 1, 3);
+
+  INSERT INTO employees (id, first_name, last_name, roles_id, manager_id)
+  VALUES (1, " Jessica ", " Newsome ", 1, 3);
