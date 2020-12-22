@@ -28,7 +28,7 @@
 
 ### Schema
 
-![](../quantumbits-employees/Assets/schema.png)
+![](../Assets/schema.png)
 
 ### Dependencies
 
