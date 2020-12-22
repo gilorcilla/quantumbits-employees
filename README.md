@@ -4,6 +4,22 @@
 
 ### Table of Contents
 
+-[User Story]
+
+-[Description]
+
+-[Installation]
+
+-[Schema]
+
+-[Dependencies]
+
+-[Built With]
+
+-[Walkthrough]
+
+-[License]
+
 ### User Story
 
 ### Description
@@ -11,6 +27,8 @@
 ### Installation
 
 ### Schema
+
+![](./Assets/schema.png.)
 
 ### Dependencies
 
